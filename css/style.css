@@ -70,6 +70,12 @@ body {
   border-color: var(--line-border-fill);
 }
 
+.circle:hover {
+  /* transform: scale(1.1); */
+  cursor: pointer;
+  border-color: #9dc2db;
+}
+
 .btn {
   background-color: var(--line-border-fill);
   color: #fff;
