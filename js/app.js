@@ -15,26 +15,30 @@ function eventListeners() {
 }
 
 //Functions
+//put eventListeners to the circles of page indicators
 function startApp() {
     circles.forEach( circle => {
         circle.addEventListener('click', () => {
             // currentPage = circle;
             currentPage = Number((circle.textContent));
-            btnDisable(currentPage)
+            btnDisable(currentPage);
         });
     });
 };
 
+//Next page
 function progressNext() {
     currentPage++;
     btnDisable(currentPage);
 };
 
+//Previus page
 function progressPrev() {
     currentPage--;
     btnDisable(currentPage);
 };
 
+//Check for disable buttons next and prev
 function btnDisable(currentPage) {
     if(currentPage === 4) {
         btnNext.disabled = true;
@@ -46,6 +50,7 @@ function btnDisable(currentPage) {
     updatePage();
 };
 
+//Update the active page
 function updatePage() {
     circles.forEach( (circle, i) => {
         if(i < currentPage) {
