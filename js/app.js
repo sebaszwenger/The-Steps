@@ -38,10 +38,7 @@ function progressPrev() {
 function btnDisable(currentPage) {
     if(currentPage === 4) {
         btnNext.disabled = true;
-    } else {
-        btnNext.disabled = false;
-    }
-    if(currentPage === 1) {
+    } else if(currentPage === 1) {
         btnPrev.disabled = true;
     } else {
         btnPrev.disabled = false;
